@@ -12,6 +12,6 @@ class PostSerializer(serializers.ModelSerializer):
 class OrdersSerializer(serializers.ModelSerializer):
    
    class Meta:
-       fields = ('id', 'customer_id', 'customer_name', 'customer_address', 'created_at', 'updated_at',)
+       fields = ('id', 'pizza_id', 'pizza_size','customer_id', 'customer_name', 'customer_address', 'created_at', 'updated_at',)
        model = models.Orders
 

@@ -16,6 +16,11 @@ class PostDetail(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+
+class OrdersList(generics.ListCreateAPIView):
+    queryset = Orders.objects.all()
+    serializer_class = OrdersSerializer
+
 class OrdersDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Orders.objects.all()
     serializer_class = OrdersSerializer
