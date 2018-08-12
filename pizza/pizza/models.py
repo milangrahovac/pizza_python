@@ -20,14 +20,17 @@ class Pizza(models.Model):
     def __str__(self):
         return self.id
 
-class Order(models.Model):
+class Orders(models.Model):
     id = models.AutoField(primary_key=True)
     pizza_id = models.IntegerField()
     customer_id = models.IntegerField()
     customer_name = models.CharField(max_length=128)
-    customer_adress = models.CharField(max_length=256)
+    customer_address = models.CharField(max_length=256)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'orders'
 
     def __str__(self):
         return self.id

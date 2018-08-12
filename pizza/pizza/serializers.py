@@ -9,9 +9,9 @@ class PostSerializer(serializers.ModelSerializer):
         model = models.Post
 
 
-#class OrderSerializer(serializers.ModelSerializer):
-#    
-#    class Meta:
-#        fields = ('id', 'customer_id', 'customer_name', 'customer_adress', 'created_at', 'updated_at',)
-#        model = models.Order
+class OrdersSerializer(serializers.ModelSerializer):
+   
+   class Meta:
+       fields = ('id', 'customer_id', 'customer_name', 'customer_address', 'created_at', 'updated_at',)
+       model = models.Orders
 
